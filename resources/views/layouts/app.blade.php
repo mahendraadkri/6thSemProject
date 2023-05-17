@@ -10,14 +10,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
     
 
-    <!--Front-->
-    <link href="{{asset('frontend/css/bootstrap5.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+<link rel="dns-prefetch" href="//fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+
+
+<!--Front-->
+<link href="{{asset('frontend/css/bootstrap5.css')}}" rel="stylesheet">
+<link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -52,6 +55,7 @@
                                 </li>
                             @endif
                         @else
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ Auth::user()->name }}
@@ -75,21 +79,7 @@
                              
                             </ul>
                           </li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    
-                                </div>
-                            </li>
+                            
                         @endguest
                     </ul>
                 </div>
@@ -100,8 +90,13 @@
             @yield('content')
         </main>
     </div>
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="{{asset('frontend/css/bootstrap5.css')}}" defer></script>
+
+     <!-- Scripts -->
+     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}" defer></script>
+
 </body>
 </html>

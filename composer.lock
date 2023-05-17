@@ -1412,6 +1412,7 @@
         },
         {
             "name": "laravel/ui",
+
             "version": "v4.2.2",
             "source": {
                 "type": "git",
@@ -1468,6 +1469,7 @@
                 "ui"
             ],
             "support": {
+
                 "source": "https://github.com/laravel/ui/tree/v4.2.2"
             },
             "time": "2023-05-09T19:47:28+00:00"
